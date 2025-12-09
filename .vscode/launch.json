@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ankit/Desktop/pythonnCode",
-      "program": "/Users/ankit/Desktop/pythonnCode/build/Debug/outDebug"
+      "cwd": "/Users/ankit/Desktop/CodePlayground/pythonnCode",
+      "program": "/Users/ankit/Desktop/CodePlayground/pythonnCode/build/Debug/outDebug"
     }
   ]
 }
