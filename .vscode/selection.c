@@ -1,0 +1,25 @@
+#include<stdio.h>
+   
+    
+int main()
+{
+    int arr[] = {5,4,2,1};
+    int n = 4;
+    for(int i=0;i<n-1;i++)
+    {
+        int min = i;
+        for(int j=i+1;j<n-1;j++)
+        {
+            if(arr[j]<arr[min])
+            {min = j;
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = arr[temp];}
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d",arr[i]);
+    }
+    return 0;
+}
