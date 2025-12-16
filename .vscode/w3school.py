@@ -1,6 +1,8 @@
 import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn import linear_model
 speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
 x = np.mean(speed)
 print(x)
@@ -46,10 +48,10 @@ data2 = np.random.uniform(0,50,240)
 a = np.std(data1)
 print(a)
 plt.hist(data1,50)
-plt.show()
+# plt.show()
 
 plt.scatter(data1,data2)
-plt.show()
+# plt.show()
 
 #linearr egression 
 
@@ -65,7 +67,7 @@ model = list(map(func,x))
 print(r)
 plt.scatter(x,y)
 plt.plot(x,model)
-plt.show()
+# plt.show()
 
 
 x1 = [89,43,36,36,95,10,66,34,38,20,26,29,48,64,6,5,36,66,72,40]
@@ -80,4 +82,27 @@ model = list(map(func1,x1))
 print("Value of relation1:",r1)
 plt.scatter(x1,y1)
 plt.plot(x1,model)
-plt.show()
+# plt.show()
+
+# df = pd.read_csv("car_data.csv")
+# df.dropna(inplace=True)
+
+# X = df[['Volume', 'Weight']]
+# y = df['CO2']
+
+# model = linear_model.LinearRegression()
+# model.fit(X,y)
+
+# prediction = model.predict([[2300,1300]])
+# print("predication value:",prediction)
+
+df = pd.read_csv("car_data.csv")
+df.dropna(inplace=True)
+x = df[['Volume','Weight']]
+y = df['CO2']
+
+model = linear_model.LinearRegression()
+model.fit(x,y)
+
+predict = model.predict([[2300,1300]])
+print(predict)

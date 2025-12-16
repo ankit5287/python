@@ -1,3 +1,4 @@
 launch.json
 settings.py
-c_app_propertties_json
+c_app_propertties_json.DS_Store
+__pycache__/
