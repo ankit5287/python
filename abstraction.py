@@ -48,3 +48,5 @@ class Rectangle(Shape):
 
 # s = Shape()        # ❌ Can't instantiate abstract class
 r = Rectangle(5, 3)  # ✅ Works
+
+
