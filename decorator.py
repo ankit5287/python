@@ -74,3 +74,13 @@ class myclass:
 obj = myclass()
 obj.greet("Ankit")
     
+#Functions are objects — they can have attributes:
+def counter():
+    counter.count += 1
+    return counter.count
+
+counter.count = 0
+
+print(counter())
+print(counter())
+print(counter())
